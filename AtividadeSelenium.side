@@ -1,0 +1,86 @@
+{
+  "id": "7e3207fe-29c1-4fcd-b66e-70c06bbcff51",
+  "version": "2.0",
+  "name": "Dicionário Português",
+  "url": "https://www.dicio.com.br",
+  "tests": [{
+    "id": "48edf1c2-f153-4cb7-b523-5bbea37546c8",
+    "name": "Pesquisar Significado",
+    "commands": [{
+      "id": "ecf1569b-ddb6-491e-9f27-392acaa7848e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb74b0ab-d2c6-41ec-8482-5aa6b3c637f9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a1bf184-d201-4a93-8dd0-20bca438f2a1",
+      "comment": "",
+      "command": "click",
+      "target": "id=q",
+      "targets": [
+        ["id=q", "id"],
+        ["name=q", "name"],
+        ["css=#q", "css:finder"],
+        ["xpath=//input[@id='q']", "xpath:attributes"],
+        ["xpath=//form[@id='searchForm']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55bc546f-2cfa-4643-999e-cb2d20b2fc2b",
+      "comment": "",
+      "command": "type",
+      "target": "id=q",
+      "targets": [
+        ["id=q", "id"],
+        ["name=q", "name"],
+        ["css=#q", "css:finder"],
+        ["xpath=//input[@id='q']", "xpath:attributes"],
+        ["xpath=//form[@id='searchForm']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "automação"
+    }, {
+      "id": "c21a1d9b-50af-439a-b732-320440e8922e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-search",
+      "targets": [
+        ["css=.icon-search", "css:finder"],
+        ["xpath=//form[@id='searchForm']/button/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee5aef43-381f-4471-afce-f096ee27f5a9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.significado > span:nth-child(2)",
+      "targets": [
+        ["css=.significado > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='content']/div/div/p/span[2]", "xpath:idRelative"],
+        ["xpath=//p/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Criação de autômatos.')]", "xpath:innerText"]
+      ],
+      "value": "Criação de autômatos."
+    }]
+  }],
+  "suites": [{
+    "id": "753e1de4-9911-4a93-acdb-88cfe1e99b20",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["48edf1c2-f153-4cb7-b523-5bbea37546c8"]
+  }],
+  "urls": ["https://www.dicio.com.br/"],
+  "plugins": []
+}
